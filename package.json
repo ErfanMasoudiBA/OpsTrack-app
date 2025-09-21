@@ -1,0 +1,45 @@
+{
+  "name": "gozareshyar-monorepo",
+  "version": "1.0.0",
+  "description": "AI-powered mobile assistant for project reporters and managers",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "shared"
+  ],
+  "packageManager": "pnpm@8.15.0",
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter backend dev\" \"pnpm --filter frontend start\"",
+    "build": "pnpm --filter shared build && pnpm --filter backend build && pnpm --filter frontend build",
+    "test": "pnpm --filter shared test && pnpm --filter backend test && pnpm --filter frontend test",
+    "lint": "pnpm --filter shared lint && pnpm --filter backend lint && pnpm --filter frontend lint",
+    "clean": "pnpm --filter shared clean && pnpm --filter backend clean && pnpm --filter frontend clean",
+    "type-check": "pnpm --filter shared type-check && pnpm --filter backend type-check && pnpm --filter frontend type-check"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "nodejs",
+    "typescript",
+    "mongodb",
+    "ai",
+    "reporting",
+    "construction",
+    "engineering"
+  ],
+  "author": "Erfan Masoudi",
+  "license": "MIT"
+}
